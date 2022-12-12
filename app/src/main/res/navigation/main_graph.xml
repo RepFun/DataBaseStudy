@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/albumsListFragment">
+
+    <fragment
+        android:id="@+id/albumsListFragment"
+        android:name="com.bam.retrofitapiexample.AlbumsListFragment"
+        android:label="fragment_albums_list"
+        tools:layout="@layout/fragment_albums_list" />
+    <fragment
+        android:id="@+id/albumListFragment"
+        android:name="com.iaa.databasestudy.AlbumListFragment"
+        android:label="AlbumListFragment" >
+        <action
+            android:id="@+id/action_albumListFragment_to_albumsListFragment"
+            app:destination="@id/albumsListFragment" />
+    </fragment>
+</navigation>
